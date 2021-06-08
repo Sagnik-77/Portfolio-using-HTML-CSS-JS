@@ -1,0 +1,951 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+:root{
+  --color:#1804ad;
+}
+
+::selection
+{
+  background: blue;
+  color: white;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background:white;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: blue;
+}
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  transition: all .2s linear;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+#preloader
+{
+  background: rgb(255, 255, 255) url(preloader.gif) no-repeat center center;
+  background-size: 15%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+
+
+.home{
+    min-height: 100vh;
+    width: 100vw;
+    background:linear-gradient(#513dec, var(--color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    padding:0 1rem;
+    position: relative;
+    overflow: hidden !important;
+    
+  }
+  
+  
+nav
+{
+  display: flex;
+  align-items: right;
+  padding: 0 0;
+}
+
+nav ul
+{
+  flex:1;
+  text-align: right;
+}
+
+nav ul li
+{
+  display: inline-block;
+  list-style: none;
+  margin: 0 15px;
+}
+
+a
+{
+  text-decoration: none;
+  font-size: 1.7rem;
+  color: rgb(130, 130, 248);
+  font-weight: 600;
+}
+
+a:hover
+{
+  font-size: 2rem;
+    color:white;
+    border-bottom: 2px solid yellow
+}
+
+
+  
+  .home .banner{
+    color:#fff;
+    font-size: 5rem;
+    text-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+  }
+  .home .banner span
+  {
+      font-size: 5rem;
+      color: yellow;
+  }
+  .home .slogan{
+    color:#eee;
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+
+
+.home .wave{
+    position: absolute;
+    bottom: -.5rem;
+    left: 0;
+    height:11rem;
+    width: 100%;
+    background: url(wave.png);
+    background-size: 100rem 11rem;
+    background-repeat: repeat-x;
+    animation:waves 10s linear infinite;
+  }
+  
+  .home .wave2{
+    animation-direction: reverse;
+    opacity: .2;
+  }
+  
+  .home .wave3{
+    animation-duration: 4s;
+    opacity: .5;
+  }
+  
+  @keyframes waves{
+    0%{
+      background-position-x: 0;
+    }
+    100%{
+      background-position-x: 100rem;
+    }
+  }
+  
+  .home .fa-cog{
+    position: absolute;
+    font-size: 30rem;
+    opacity: .15;
+    color:#fff;
+    animation: rotate 10s linear infinite;
+  }
+  
+  .home .nut1{
+    top:10%; left: -15rem;
+  }
+  
+  .home .nut2{
+    bottom:23%; right: -13rem;
+    animation-direction: reverse;
+  }
+  
+  @keyframes rotate{
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+
+  /*------HOME SECTION ENDS------*/
+
+  /*------ABOUT SECTION STARTS------*/
+
+  .dashBoard
+  {
+      width: 80%;
+      height: 50vh;
+      margin: auto;
+      text-align: center;
+      padding-top: 100px;
+      justify-content: center;
+  }
+  
+  
+  .dashBoard h1
+  {
+      font-size: 36px;
+      font-weight: 600;
+      font-family:'Poppins', sans-serif;
+      color: blue;
+  }
+  .dashBoard p
+  {
+      color:rgb(85, 82, 82);
+      font-family:'Poppins', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 22px;
+      padding: 10px;
+  }
+  .image
+  {
+    width: 20%;
+    align-items: center;
+    padding-top: 4rem;
+  }
+
+  /*-------Slider Starts---------*/
+
+  .slider
+  {
+    
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+  }
+  .slider h2
+  {
+    font-size: 20px;
+    position: relative;
+    margin-bottom: 80px;
+  }
+
+  .box
+  {
+    width: 80%;
+    max-width: 600px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: -10px 10px 40px rgba(0,0,0,.15);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card
+  {
+    height: 40rem;
+    padding: 40px;
+    color: black;
+    line-height: 32px;
+    box-sizing: border-box;
+    background: white;
+    position: relative;
+    z-index: 1;
+  }
+
+  .card::before
+  {
+    content: ' ';
+    width: 110px;
+    height: 110px;
+    border-bottom-right-radius: 100%;
+    background: yellow;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: -1;
+  }
+  .items
+  {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  span
+  {
+    font-weight: bold;
+    color: blue;
+  }
+  .items i
+  {
+    width: 50px;
+    color: blue;
+  }
+  .items h3
+  {
+  font-weight: bolder;
+  font-size: 20px;
+  margin-bottom: 3px;
+  }
+
+  #slide
+  {
+    width: 100%;
+    padding-right: 60px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 500ms;
+  }
+
+  .sidebar
+  {
+    width: 40px;
+    height: 100%;
+    padding: 15px 0;
+    box-sizing: border-box;
+    background: blue;
+    position: absolute;
+    top: 0;
+    right:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sidebar i
+  {
+    width: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+  }
+   /*-------Slider Ends---------*/
+
+  /*------ABOUT SECTION ENDS------*/
+
+  /*------------------------------------------SKILLS STARTS---------------------------------------------*/
+
+  .skills_section
+  {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 2rem;
+  }
+
+   .skills_section h2
+  {
+    font-size: 3rem;
+    font-weight: 600;
+    color: blue;
+  }
+  .skills_container
+  {
+    width: 60%;
+    margin-left: 25rem;
+    row-gap: 0;
+    
+  } 
+
+  .skills_header
+  {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    cursor: pointer;
+  }
+
+  .skills_icon,.skills_arrow
+  {
+    font-size: 2rem;
+    color: blue;
+  }
+
+  .skills_icon
+  {
+    
+    margin-right: 1rem;
+  }
+
+  .skills_arrow
+  {
+    margin-left: 1rem;
+    transition: 0.4s;
+  }
+
+  .skills_list
+  {
+    row-gap: 1.5rem;
+    padding-left: 2.7rem;
+  }
+  .skilss_title
+  {
+    font-size: 1.8rem;
+  }
+
+  .skills_title
+  {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  .skills_name
+  {
+    color: rgb(49, 47, 47);
+    
+    font-weight: bold;
+  }
+
+  .skills_bar, .skilss_percentage
+  {
+    margin-top:0;
+    margin-bottom: 3rem;
+    height: 5px;
+    border-radius: 0.25rem;
+  }
+
+  .skills_bar
+  {
+    background-color: rgb(178, 178, 241);
+  }
+
+  .skilss_percentage
+  {
+    display: block;
+    background-color:blue;
+  }
+
+  .skills_html
+  {
+    width: 90%;
+  }
+  
+  .skills_css
+  {
+    width: 80%;
+  }
+
+  .skills_js
+  {
+    width: 75%;
+  }
+
+  .skills_node
+  {
+    width: 80%;
+  }
+
+  .skills_php
+  {
+    width: 55%;
+  }
+
+  .skills_python
+  {
+    width: 60%;
+  }
+
+  .skills_xd
+  {
+    width: 90%;
+  }
+
+  .skills_figma
+  {
+    width: 60%;
+  }
+
+  .skills_adobe
+  {
+    width: 70%;
+  }
+
+  
+  .skills_open .skills_list
+  {
+    height: max-content;
+    margin-bottom: 2.5rem;
+  }
+
+  .skills_open .skills_arrow
+  {
+    transform: rotate(-180deg);
+  }
+  
+
+  /*----social media icons-----*/
+
+.socialmedia img
+{
+    width: 20px;
+    display: block;
+    margin: 0 auto 20px;
+    cursor: pointer;
+}
+.socialmedia
+{
+    width: 50px;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/*------------------------------------------SKILLs ENDS---------------------------------------------*/
+
+/*------------------------------------------WORKS STARTS---------------------------------------------*/
+
+
+
+#works
+{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 4rem;
+}
+
+#works h2
+{
+    font-size: 3rem;
+    font-weight: 600;
+    color: blue;
+}
+
+.row
+{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.work-col
+{
+  
+  flex-basis: 32%;
+  border-radius: 10px;
+  box-shadow: -10px 10px 40px rgba(0,0,0,.15);
+  margin-bottom: 2em;
+  position: relative;
+  overflow: hidden;
+}
+
+.work-col img
+{
+  width: 100%;
+  display: block;
+}
+
+.layer
+{
+  background:transparent;
+  opacity: 0.8;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.layer:hover
+{
+  background: blue;
+
+}
+
+.layer h3
+{
+  width: 100%;
+  color: white;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.layer:hover h3
+{
+  opacity: 1;
+  bottom: 49%;
+}
+.layer p
+{
+  width: 100%;
+  color: yellow;
+  font-weight: 400;
+  font-size: 1.5rem;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.layer:hover p
+{
+  opacity: 1;
+  bottom: 49%;
+}
+
+
+#contact
+{
+  padding-left: 10%;
+  padding-right: 10%;
+  box-sizing: border-box;
+  margin: 5rem 0;
+  text-align: center;
+}
+#contact h4
+{
+  margin-bottom: 4rem;
+  margin-top: 5rem;
+  font-weight: 600;
+  color: blue;
+ 
+}
+
+#contact p
+{
+  line-height: 2rem;
+  
+}
+
+.icons
+{
+  padding: 1rem;
+}
+
+.icons i
+{
+  color: blue;
+  margin: 0 2rem;
+  cursor: pointer;
+  padding: 1rem 0;
+}
+
+.copyright
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  background: #ebebeb;
+  color: black;
+  font-size: 0.7rem;
+}
+/*------------------------------------------WORKS ENDS---------------------------------------------*/
+/*
+@media (min-width:1080px)
+{
+
+ .home{
+    min-height: 70vh;
+    width: 100vw;
+    background:linear-gradient(#513dec, var(--color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    padding:0 1rem;
+    position: relative;
+    overflow: hidden !important;
+    
+  }
+  
+  .dashBoard
+  {
+      width: 80%;
+      height: 20vh;
+      
+      text-align: center;
+      padding-top: 20rem;
+      justify-content: center;
+  }
+
+  .image
+  {
+    width: 25%;
+    align-items: center;
+    padding-top: 4rem;
+  }
+
+  .slider
+  {
+    
+    width: 100%;
+    height: 50vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+  }
+
+  .skills_container
+  {
+    width: 60%;
+    margin-left: 15rem;
+    row-gap: 0;
+  }
+
+  .work h2
+  {
+      font-size: 3rem;
+      font-weight: 600;
+      color: blue;
+  }
+  .work p
+  {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .row
+  {
+      flex-direction: column;
+  }
+
+  .layer h3
+{
+  width: 100%;
+  color: white;
+  font-size: 5rem;
+  font-weight: 600;
+  padding-bottom: 2rem;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.layer p
+{
+  width: 100%;
+  color: yellow;
+  font-weight: 400;
+  
+  font-size: 3rem;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.layer:hover p
+{
+  opacity: 1;
+  bottom: 45%;
+}
+
+
+#contact h4
+{
+  margin-bottom: 4rem;
+  margin-top: 5rem;
+  font-size: 4rem;
+  font-weight: 600;
+  color: blue;
+ 
+}
+
+#contact p
+{
+  line-height: 4rem;
+  font-size: 3rem;
+}
+
+.copyright
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  background: #ebebeb;
+  color: black;
+  font-size: 2rem;
+}
+
+
+}*/
+
+  @media (max-width:768px)
+  {
+
+     /*------HOME SECTION STARTS------*/
+    .home .banner h1{
+        font-size: 1.5rem;
+      }
+    
+      .home .slogan{
+        font-size: 1.7rem;
+      }
+
+      .home .nut1{
+        top:-20%; left: -15rem;
+      }
+      
+      .home .nut2{
+        bottom:10%; right: -13rem;
+        animation-direction: reverse;
+      }
+    
+       /*------HOME SECTION ENDS------*/
+
+       /*------ABOUT SECTION STARTS------*/
+       .dashBoard h1
+  {
+      font-size: 24px;
+      font-weight: 500;
+      font-family:'Poppins', sans-serif;
+      color: blue;
+  }
+  .dashBoard p
+  {
+      color:rgb(85, 82, 82);
+      font-family:'Poppins', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 18px;
+      padding: 10px;
+  }
+      
+       .image
+      {
+        width: 40%;
+        align-items: center;
+        padding-top: 4rem;
+      }
+      
+
+/*---SLIDER STARTS---*/
+  .box
+  {
+    width: 80%;
+    max-width: 60rem;
+    height: 40rem;
+    border-radius: 10px;
+    box-shadow: -10px 10px 40px rgba(0,0,0,.15);
+    position: relative;
+  }
+
+  .card
+  {
+    height: 40rem;
+    padding: 30px;
+    color: black;
+    line-height: 22px;
+    box-sizing: border-box;
+    background: white;
+    position: relative;
+    z-index: 1;
+  }
+
+  .items i
+  {
+    width: 70px;
+    color: blue;
+  }
+
+  .items h3
+  {
+  font-weight: bolder;
+  font-size: 20px;
+  margin-bottom: 3px;
+  }
+  .card p
+  {
+    padding-top: 2rem;
+    font-size: 12px;
+  }
+  
+
+   /*-------Slider Ends---------*/
+      
+   .skills_container
+  {
+    width: 60%;
+    margin-left: 5rem;
+    row-gap: 0;
+  } 
+        /*------ABOUT SECTION ENDS------*/
+
+
+  /*---------------WORKS------------------------*/
+
+  .work h2
+  {
+      font-size: 2rem;
+      font-weight: 600;
+      color: blue;
+  }
+  .work p
+  {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+  .row
+  {
+      flex-direction: column;
+  }
+
+
+  .socialmedia
+{
+    width: 50px;
+    position: fixed;
+    top: 50%;
+    left: -0.9rem;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+#contact h4
+{
+  margin-bottom: 4rem;
+  margin-top: 5rem;
+  font-weight: 600;
+  color: blue;
+ 
+}
+
+#contact p
+{
+  line-height: 2rem;
+  font-size: 1.5rem;
+  text-align: block;
+}
+
+#preloader
+{
+  background: rgb(255, 255, 255) url(preloader.gif) no-repeat center center;
+  background-size: 40%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+  }
+
+  
